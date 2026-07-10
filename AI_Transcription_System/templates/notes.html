@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecture Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <h1>Lecture Notes</h1>
+
+    <div class="card">
+        <textarea readonly>{{ notes or "No notes available." }}</textarea>
+    </div>
+
+    <a href="/">⬅ Back to Dashboard</a>
+</div>
+
+</body>
+</html>
