@@ -1,8 +1,8 @@
-# 🎙️ AI Transcription System
+#  AI Transcription System
 
 An AI-powered web application that converts speech into text and automatically generates summaries, notes, and question-answer pairs using Artificial Intelligence.
 
-## 📌 Project Overview
+##  Project Overview
 
 The AI Transcription System helps users transform audio recordings into accurate text transcripts. It also uses Generative AI to create concise summaries, important notes, and practice questions from the transcribed content.
 
@@ -10,19 +10,19 @@ This project is useful for students, teachers, researchers, content creators, an
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🎤 Upload audio files
-- 📝 Convert Speech to Text
-- 📄 Generate AI Summary
-- 📚 Generate Important Notes
-- ❓ Generate Question & Answer
-- 🌐 User-friendly Flask Web Interface
-- ⚡ Fast and Easy to Use
+-  Upload audio files
+-  Convert Speech to Text
+-  Generate AI Summary
+-  Generate Important Notes
+-  Generate Question & Answer
+-  User-friendly Flask Web Interface
+-  Fast and Easy to Use
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 - HTML5
@@ -46,7 +46,7 @@ This project is useful for students, teachers, researchers, content creators, an
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 AI_Transcription_System/
@@ -70,7 +70,7 @@ AI_Transcription_System/
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Clone the Repository
 
@@ -104,7 +104,7 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📋 How It Works
+##  How It Works
 
 1. Upload an audio file.
 2. The system converts speech into text using Whisper.
@@ -117,7 +117,7 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🎯 Applications
+##  Applications
 
 - Lecture Transcription
 - Meeting Notes
@@ -138,7 +138,7 @@ Summary Section
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - Multiple Language Support
 - PDF Report Generation
@@ -150,7 +150,7 @@ Summary Section
 
 ---
 
-## 👩‍💻 Developer
+##  Developer
 
 **Taniya**
 
