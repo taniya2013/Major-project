@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transcript</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="main">
+    <h1>Transcript</h1>
+
+    <div class="card">
+        <textarea readonly>{{ transcript or "No transcript available." }}</textarea>
+    </div>
+
+    <a href="/">⬅ Back to Dashboard</a>
+</div>
+
+</body>
+</html>
