@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Transcription Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🎤 TranscribeAI</h2>
+
+  <ul class="menu">
+
+    <li><a href="#dashboard"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+
+    <li><a href="#upload"><i class="fas fa-upload"></i><span>Upload</span></a></li>
+
+    <li><a href="#transcript"><i class="fas fa-file-alt"></i><span>Transcript</span></a></li>
+
+    <li><a href="#summary"><i class="fas fa-file-lines"></i><span>AI Summary</span></a></li>
+
+    <li><a href="#notes"><i class="fas fa-book"></i><span>Lecture Notes</span></a></li>
+
+    <li><a href="#interview"><i class="fas fa-comments"></i><span>Interview Q&A</span></a></li>
+
+    <li><a href="#downloads"><i class="fas fa-download"></i><span>Downloads</span></a></li>
+
+</ul>
+</div>
+
+
+<div class="main">
+
+    <div class="topbar" id="dashboard">
+
+        <h1>AI Audio & Video Transcription</h1>
+
+        
+       
+    <a href="/profile" class="profile-icon"></a>
+
+    <i class="fas fa-user-circle"></i>
+</a>
+
+
+    </div>
+
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+    <div class="upload-card" id="upload">
+
+        <h2>🎤 Upload Audio / Video</h2>
+
+        <input
+            type="file"
+            name="file"
+            accept=".mp3,.wav,.mp4,.mov,.mkv"
+            required>
+
+        <button type="submit" class="upload-btn">
+            🚀 Start Transcription
+        </button>
+
+    </div>
+
+</form>
+
+
+  <div class="card" id="transcript">
+
+<h3><i class="fas fa-file-alt"></i> Transcript</h3>
+
+<textarea readonly>{{ transcript or "" }}</textarea>
+
+</div>
+
+    <!-- AI Summary -->
+  <div class="card" id="summary">
+
+<h3><i class="fas fa-file-lines"></i> AI Summary</h3>
+
+<textarea readonly>{{ summary or "" }}</textarea>
+
+</div>
+
+    <!-- Lecture Notes -->
+   <div class="card" id="notes">
+
+<h3><i class="fas fa-book"></i> Lecture Notes</h3>
+
+<textarea readonly>{{ notes or "" }}</textarea>
+
+</div>
+
+    <!-- Interview Q&A -->
+    <div class="card" id="interview">
+
+<h3><i class="fas fa-comments"></i> Interview Q&A</h3>
+
+<textarea readonly>{{ qa or "" }}</textarea>
+
+</div>
+<div class="card" id="downloads">
+
+<h3><i class="fas fa-download"></i> Downloads</h3>
+
+<a href="{{ url_for('download_transcript') }}">
+    <button type="button" class="upload-btn">📄 Download Transcript</button>
+</a>
+
+<br><br>
+
+<a href="{{ url_for('download_notes') }}">
+    <button type="button" class="upload-btn">📝 Download Notes</button>
+</a>
+
+<br><br>
+
+<a href="{{ url_for('download_summary') }}">
+    <button type="button" class="upload-btn">📚 Download Summary</button>
+</a>
+
+<br><br>
+
+<a href="{{ url_for('download_qa') }}">
+    <button type="button" class="upload-btn">💬 Download Interview Q&A</button>
+</a>
+<div class="topbar" id="dashboard">
+
+    <h1>AI Audio & Video Transcription</h1>
+
+    <a href="{{ url_for('profile') }}" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+    </a>
+
+</div>
+
+</div>
+</div>
+    </div>
+
+</div>
+
+</body>
+</html>
