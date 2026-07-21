@@ -1,7 +1,7 @@
 Flask==3.1.2
 openai-whisper==20250625
-torch==2.7.1
-torchaudio==2.7.1
+torch
+torchaudio
 google-genai
 python-dotenv
 requests
