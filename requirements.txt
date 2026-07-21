@@ -1,15 +1,30 @@
 Flask==3.1.2
+gunicorn
+
+# AI
 openai-whisper==20250625
+google-genai
 torch
 torchaudio
-google-genai
+
+# Environment
 python-dotenv
+
+# HTTP
 requests
+
+# Audio/Video
 ffmpeg-python
-gunicorn
-Werkzeug
-jinja2
-click
+yt-dlp
+
+# Utilities
 numpy
 tqdm
 regex
+click
+Werkzeug
+Jinja2
+
+# Whisper dependencies
+more-itertools
+tiktoken
