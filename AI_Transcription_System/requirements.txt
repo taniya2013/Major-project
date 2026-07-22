@@ -1,0 +1,13 @@
+Flask==3.1.2
+groq==0.31.0
+google-genai
+python-dotenv
+requests
+ffmpeg-python
+gunicorn
+Werkzeug
+jinja2
+click
+numpy
+tqdm
+regex
