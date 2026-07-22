@@ -10,6 +10,7 @@ requests
 ffmpeg-python
 gunicorn
 Werkzeug
+yt-dlp
 jinja2
 click
 numpy
