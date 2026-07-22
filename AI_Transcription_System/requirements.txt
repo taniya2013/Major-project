@@ -5,6 +5,7 @@ python-dotenv
 requests
 ffmpeg-python
 gunicorn
+yt-dlp
 Werkzeug
 jinja2
 click
