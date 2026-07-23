@@ -1,5 +1,5 @@
-
 import os
+import time
 from dotenv import load_dotenv
 from google import genai
 
@@ -17,7 +17,7 @@ The transcript may contain speech recognition errors.
 Before generating the output:
 - Correct grammar and spelling.
 - Correct obvious pronunciation mistakes.
-- If  refers to the speaker's name, replace it with "Taniya".
+- If <PERSON> refers to the speaker's name, replace it with "Taniya".
 - Use the corrected transcript for every output.
 
 Generate output in this exact format:
@@ -35,12 +35,21 @@ Transcript:
 {text}
 """
 
-    response = client.models.generate_content(
-    model="gemini-3.5-flash",
-    contents=combined_prompt
-)
+    # Retry up to 3 times if server is busy
+    for attempt in range(3):
+        try:
+            response = client.models.generate_content(
+                model="gemini-3.5-flash",
+                contents=combined_prompt
+            )
+            response_text = response.text
+            break
 
-    response_text = response.text
+        except Exception as e:
+            if "503" in str(e) and attempt < 2:
+                time.sleep(5)
+            else:
+                raise e
 
     try:
         summary = response_text.split("NOTES:")[0].replace("SUMMARY:", "").strip()
