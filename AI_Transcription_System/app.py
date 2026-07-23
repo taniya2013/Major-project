@@ -194,18 +194,18 @@ def url_transcribe():
             filename
         )
 
-        ydl_opts = {
-         "format": "bestaudio/best",
-        "cookiefile": "cookies.txt",
-
-            "outtmpl": output_path,
-            "noplaylist": True,
-            "postprocessors": [
-                {
-                    "key": "FFmpegExtractAudio",
-                    "preferredcodec": "mp3",
-                    "preferredquality": "192",
-                }
+       ydl_opts = {
+    "format": "bestaudio/best",
+    "extractor_args": {
+        "youtube": {
+            "player_client": ["android"]
+        }
+    },
+    "http_headers": {
+        "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/137.0 Safari/537.36"
+    }
+}
             ],
         }
 
