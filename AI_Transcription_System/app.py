@@ -69,7 +69,7 @@ def upload():
 def transcript():
     return render_template(
         "transcript.html",
-        transcript=session.get("transcript", "No transcript available")
+        transcript=session.get("transcript", "")
     )
 
 
